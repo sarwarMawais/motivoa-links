@@ -26,7 +26,7 @@
 <body>
 <main>
   <h1>Motivoa — Privacy Policy</h1>
-  <p class="date">Effective Date: September 18, 2026 · Last updated: September 18, 2026</p>
+  <p class="date">Effective Date: September 18, 2026 · Last updated: September 26, 2026</p>
 
   <h2>1. Who we are</h2>
   <p>Motivoa (“the App”) is published by <strong>TubeAI Labs</strong> (“we”, “us”), an
@@ -106,8 +106,14 @@
     <li><strong>It runs on your device.</strong> Generated replies come from an on-device model
     (Google's ML Kit GenAI / Gemini Nano). What you type to the companion is processed on your
     phone and is <strong>not sent to us or to any model server</strong>.</li>
-    <li>On devices without on-device AI support, the companion answers from a fixed set of written
-    responses instead. Either way, nothing you write leaves the device.</li>
+    <li>On a phone without Gemini Nano, the App may offer a second on-device model, <strong>Gemma</strong>
+    (Google's open model, about 2.6&nbsp;GB), if the phone is powerful enough. It is downloaded only
+    if you turn conversations on and agree to the download, once, over Wi-Fi, from
+    <strong>Hugging Face</strong>. Like any download, that request shows Hugging Face your IP address;
+    it carries nothing you have written. After that the model runs on your phone exactly as Gemini
+    Nano does, and you can delete it from the companion's AI settings.</li>
+    <li>On devices that can run neither, the companion answers from a fixed set of written
+    responses instead. Whichever applies, nothing you write leaves the device.</li>
     <li>Generated text is <strong>always labelled</strong> in the App as AI-generated. The companion
     is not a human, and it is not a therapist.</li>
     <li>Access to the generative features is <strong>restricted to adults (18+)</strong> and
@@ -159,12 +165,16 @@
   <p>The App uses these Google services:</p>
   <ul>
     <li><strong>Firebase Analytics &amp; Crashlytics</strong> — anonymous usage and crash data, only with your consent</li>
-    <li><strong>Firebase Remote Config</strong> — fetches configuration <em>to</em> your device; nothing you write is sent with the request</li>
+    <li><strong>Firebase Remote Config</strong> — fetches configuration <em>to</em> your device on each launch, so that safety keywords and an emergency ads switch can be updated without an app update. The request carries an anonymous installation identifier and basic device information (app version, language, OS); it does not depend on your analytics choice, and nothing you write is sent with it</li>
     <li><strong>Google Play Billing</strong> — processes Premium purchases. We never see your payment details</li>
     <li><strong>Google AdMob</strong> — ads in the free version (section 5)</li>
     <li><strong>Google User Messaging Platform</strong> — asks for and records your ad consent choice</li>
     <li><strong>ML Kit GenAI (on-device)</strong> — runs the companion's model locally; sends nothing</li>
   </ul>
+  <p>One service that is not Google's: <strong>Hugging Face</strong>, from which the App downloads the
+  Gemma model once, and only if you turn conversations on for a phone without Gemini Nano (section 4).
+  The download reveals your IP address to Hugging Face, as any download does; nothing you write is
+  sent.</p>
 
   <h2>8. International transfers</h2>
   <p>The Google services above are operated by Google and may process data on servers outside your
